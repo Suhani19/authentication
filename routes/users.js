@@ -21,7 +21,7 @@ router.post('/register', (req, res) => {
     errors.push({ msg: 'Please enter all fields' });
   }
 
-  if (password != password2) {
+  if (password !== password2) {
     errors.push({ msg: 'Passwords do not match' });
   }
 
@@ -59,8 +59,7 @@ router.post('/register', (req, res) => {
           bcrypt.hash(newUser.password, salt, (err, hash) => {
             if (err) throw err;
             newUser.password = hash;
-            newUser
-              .save()
+            newUser.save()
               .then(user => {
                 req.flash(
                   'success_msg',
