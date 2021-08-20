@@ -25,11 +25,12 @@ The Billboard Hot 100 Chart1 remains one of the definitive ways to measure the s
 
 5)After cleaning the data, a dataset of approx. 10000 songs was created.
 
+
 # Exploratory Data Analysis -
 
 Dropped the duplicates present in the dataset and then plotted graphs:-
 
-                1) The countplot of songs to hit billboard or not:
+                1) The countplot of the output Column
 ![distribution of top100](https://user-images.githubusercontent.com/66556476/130225045-8549dbbb-2954-47da-b57c-c6407af235f0.png)
 
                 2) Distribution of Genre
@@ -62,36 +63,52 @@ The graphs in the code show the separability in the data when compared across tw
 
          
 ## STEPS INVOLVED IN BUILDING MODELLING:
--> Dropped the unnecessary columns
--> Balanced the output classes
--> Scaled the data with min max scaler
--> Splitted the datasets into train and test data(80/20)
--> Passed our preprocessed data into our logistic regression modela and Linear Discrimanant Analysis(LDA) and trained the data
--> We also performed hyperparameter tuning
+
+1)Dropped the unnecessary columns
+
+2)Balanced the output classes
+
+3)Scaled the data with min max scaler
+
+4)Splitted the datasets into train and test data(80/20)
+
+5)Passed our preprocessed data into our logistic regression modela and Linear Discrimanant Analysis(LDA) and trained the data
+
+6)We also performed hyperparameter tuning
 
 ## Observations: (Logistic Regression)
-1)ACCURACY:67
 
-2)ROC:0.66
+1) ACCURACY:67
 
-3)PRECISION: (70 FOR 0 AND, 65 FOR 1)
+2) ROC:0.66
 
-4)RECALL: (58 FOR 0 AND , 76 FOR 1)
+3) PRECISION: (70 FOR 0 AND, 65 FOR 1)
+
+4) RECALL: (58 FOR 0 AND , 76 FOR 1)
+
 
 ## Observations (LDA):
-ACCURACY:68
 
-2)ROC:0.67
+1) ACCURACY:68
 
-3)PRECISION: (69 FOR 0 AND, 66 FOR 1)
+2) ROC:0.67
 
-4)RECALL: (60 FOR 0 AND , 75 FOR 1)
+3) PRECISION: (69 FOR 0 AND, 66 FOR 1)
 
-## Screenshot of 
+4) RECALL: (60 FOR 0 AND , 75 FOR 1)
+
+
+## Screenshots -
+
+Logistic Regression :
+
 
 ![roc1](https://user-images.githubusercontent.com/66556476/130228799-b5a0a9a5-d647-41de-a48e-0f6bf0947e69.png)
 
 ![cl1](https://user-images.githubusercontent.com/66556476/130228820-3f8edef4-2d88-4930-af7e-05abfc8228d7.png)
+
+LDA:
+
 
 ![roc2](https://user-images.githubusercontent.com/66556476/130228862-1471176b-080f-4368-b512-f6b074522bc3.png)
 
@@ -100,35 +117,39 @@ ACCURACY:68
 
 
 
-
-
-  
-
 ## Tools/libraries used for deployment:
+
 1) FLASK: Flask is a web application framework written in Python. It has multiple modules that make it easier for a web developer to write applications without having to worry about the details like protocol management, thread management, etc.
 
 2) HEROKU: Heroku is a container-based cloud Platform as a Service (PaaS). Developers use Heroku to deploy, manage, and scale modern apps. Our platform is elegant, flexible, and easy to use, offering developers the simplest path to getting their apps to market.
 
-3)HTML,css
+3) HTML,CSS
+
 ## Deployment Steps :
+
 1)First we need to create a folder which will contain all the files required for deployment
+
 2)We need to have static folder, which will contain images
+
 3)templates= will have html and css codes
+
 4)app.py which will have a code that will predict the outcomes by taking datas and render with html files
+
 5)model.pkl file should be there (saved model)
+
 6)requirements.txt will contain the neceessary libraries which we used to build a model
+
 7)Procfile is used to run application on heroku cloud platform
 
 
-## Deployment of Project
-
-To deploy this project run
+## Deployment of Project :
 
 ```bash
     To run locally - python app.py
-     To run this project run in browser - https://billboardhot100-predictionapp.herokuapp.com/
+    To run this project run in browser - https://billboardhot100-predictionapp.herokuapp.com/
 ```
 ## Deployment Screenshots -
+
 ![1](https://user-images.githubusercontent.com/66556476/130234893-be8eb86e-07e5-4a06-86ca-c30f7ad97bb7.png)
 
 ![2](https://user-images.githubusercontent.com/66556476/130234898-d7392378-eb33-450d-b004-77193855098b.png)
